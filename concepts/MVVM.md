@@ -53,3 +53,51 @@ This is the primary architecture for any reasonably complex SwiftUI application
 
 You'll also quickly see how #3 (partial separation) is just a minor tweak to MVVM.
 
+
+## Varieties of Types
+
+### Struct and Class
+
+Both *struct* and *class* have pretty much exactly the same syntax.
+stored vars (the kind you are used to, i.e, stored in memory)
+computed vars (i.e. those whose value is the result of evaluating some code)
+constant lets (i.e. vars whose values never change)
+Initializers (i.e. special functions that are called when creating a struct or class)
+
+```swift
+// variables
+var body: some View {
+  return Text("Hello World")
+}
+
+// constants
+let defaultColor = Color.orange
+
+CardView().foregroundColor(defaultColor)
+
+// functions
+func multiply(operand: Int, by: Int) -> Int {
+  return operand * by
+}
+
+multiply(operand: 5, by: 6)
+
+func multiply(_ operand: Int, by otherOperand: Int) -> Int {
+  return operand * otherOperand
+}
+
+multiply(5, by: 6)
+
+// Initializers
+
+struct RoundedRectangle {
+  init(cornerRadius: CGFloat) {
+    // initialize this rectangle with that cornerRadius
+  }
+  init(cornerSize: CGSize) {
+    // initialize this rectangle whit tat cornerSize
+  }
+}
+
+
+```
