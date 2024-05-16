@@ -5,4 +5,8 @@
 //  Created by Ramon Xavier on 15/05/24.
 //
 
-import Foundation
+import SwiftUI
+
+class EmojiMemorizeGame {
+    var model: MemorizeGame<String>
+}
