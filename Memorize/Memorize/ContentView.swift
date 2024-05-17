@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var viewModel: EmojiMemorizeGame
     let emojis = ["👻", "🎃", "👻", "🎃", "🎃", "👻"]
     
     @State var cardCount: Int = 4
