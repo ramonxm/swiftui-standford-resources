@@ -12,6 +12,11 @@ struct MemorizeGame<CardContent> {
     
     init(numberOfPairsOfCards: Int) {
         cards = []
+        
+        for _ in 0..<numberOfPairsOfCards {
+            cards.append(Card(content: <#T##CardContent#>))
+            cards.append(Card(content: <#T##CardContent#>))
+        }
     }
     
     func choose(_ card: Card) {
@@ -20,8 +25,8 @@ struct MemorizeGame<CardContent> {
     
     
     struct Card {
-        var isFaceUp: Bool
-        var isMatched: Bool
-        var content: CardContent
+        var isFaceUp = false
+        var isMatched = false
+        let content: CardContent
     }
 }
