@@ -10,17 +10,22 @@ import Foundation
 struct MemorizeGame<CardContent> {
     private(set) var cards: Array<Card>
     
-    init(numberOfPairsOfCards: Int) {
+    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = []
         
-        for _ in 0..<numberOfPairsOfCards {
-            cards.append(Card(content: <#T##CardContent#>))
-            cards.append(Card(content: <#T##CardContent#>))
+        for pairIndex in 0..<max(2, numberOfPairsOfCards) {
+            let content = cardContentFactory(pairIndex)
+            cards.append(Card(content: content))
+            cards.append(Card(content: content))
         }
     }
     
     func choose(_ card: Card) {
         
+    }
+    
+    mutating func shuffle() {
+        cards.shuffle()
     }
     
     
