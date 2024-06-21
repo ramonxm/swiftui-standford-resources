@@ -27,6 +27,13 @@ struct MemorizeGame<CardContent> where CardContent: Equatable {
             
             if !cards[chosenIndex].isFaceUp && !cards[chosenIndex].isMatched {
                 
+                if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
+                    if cards[chosenIndex].content == cards[potentialMatchIndex].content {
+                        cards[chosenIndex].isMatched = true
+                        cards[potentialMatchIndex].isMatched = true
+                    }
+                }
+                
                 cards[chosenIndex].isFaceUp = true
             }
       }
