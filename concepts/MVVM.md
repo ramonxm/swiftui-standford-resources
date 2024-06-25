@@ -101,3 +101,15 @@ struct RoundedRectangle {
 
 
 ```
+
+
+## Layout
+
+### HStack and VStack
+
+Stacks divide up the space that is offered to them and then offer that to the Views inside.
+It offers space to its "least flexible" (with respect to sizing) subviews first ...
+
+Example of an "inflexible" View: Image (it wants to be a fixed size)
+Another example (slightly more flexible): Text (always to size to exactly fit its text).
+Example of a very flexible View: RoundedRectangle (always use any space offered)
