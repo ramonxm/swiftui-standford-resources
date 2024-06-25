@@ -113,3 +113,12 @@ It offers space to its "least flexible" (with respect to sizing) subviews first 
 Example of an "inflexible" View: Image (it wants to be a fixed size)
 Another example (slightly more flexible): Text (always to size to exactly fit its text).
 Example of a very flexible View: RoundedRectangle (always use any space offered)
+
+After an offered View(s) takes what it wants, its size is removed form the space available.
+Then the stacks moves on to the next "least flexible" Views.
+
+Very flexible views (i.e those that will take all offered space) will share evenly (mostly)
+Rinse and repeat.
+
+After the Views inside the stack choose their own sizes, the stack sizes itself to fit them.
+If any of the Views in the stack are "very flexible", then the stack will also be "very flexible"
