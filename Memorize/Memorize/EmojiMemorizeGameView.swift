@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct EmojiMemorizeGameView: View {
-   @ObservedObject var viewModel: EmojiMemorizeGame
+    @ObservedObject var viewModel: EmojiMemorizeGame
+    private let aspectRatio: CGFloat = 2/3
+
+    func gridItemWidthThatFits(count: Int, size: CGSize, atAspectRatio aspectRatio: CGFloat) -> CGFloat {
+        let count = CGFloat(count)
+        var columnCount = 1.0
+        
+        repeat {
+            let width = size.width / columnCount
+            let height = width / aspectRatio
+            
+            let rowCount = (count / columnCount).rounded(.up)
+            
+            if rowCount * height < size.height {
+                return (size.width / columnCount).rounded(.down)
+            }
+            
+            columnCount += 1
+        } while columnCount < count
+        return min(size.width / count, size.height * aspectRatio).rounded(.down)
+    }
+
     
     var body: some View {
         VStack {
-            ScrollView {
-                cards
-                    .animation(.default, value: viewModel.cards)
-            }
+            cards
+                .animation(.default, value: viewModel.cards)
+        
             Button("Shuffle") {
                 viewModel.shuffle()
             }
@@ -24,22 +44,26 @@ struct EmojiMemorizeGameView: View {
     }
     
     var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85), spacing: 0)]) {
-            ForEach(viewModel.cards) { card in
-                CardView(card)
-                    .aspectRatio(2/3, contentMode: .fit)
-                    .padding(4)
-                    .onTapGesture {
-                        viewModel.choose(card)
+        GeometryReader { geometry in
+            let gridItemSize = gridItemWidthThatFits(
+                count: viewModel.cards.count,
+                size: geometry.size,
+                atAspectRatio: aspectRatio)
+            
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
+                ForEach(viewModel.cards) { card in
+                    CardView(card)
+                        .aspectRatio(aspectRatio, contentMode: .fit)
+                        .padding(4)
+                        .onTapGesture {
+                            viewModel.choose(card)
+                        }
                     }
+                }
             }
+            .foregroundColor(Color.orange)
         }
-        .foregroundColor(Color.orange)
     }
-    
-  
-  
-}
 
 struct CardView: View {
     let card: MemorizeGame<String>.Card
