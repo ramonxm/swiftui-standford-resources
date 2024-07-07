@@ -10,10 +10,12 @@ import SwiftUI
 struct EmojiMemorizeGameView: View {
     @ObservedObject var viewModel: EmojiMemorizeGame
     private let aspectRatio: CGFloat = 2/3
+    private let spacing: CGFloat = 4
     
     var body: some View {
         VStack {
             cards
+                .foregroundColor(viewModel.color)
                 .animation(.default, value: viewModel.cards)
             
             Button("Shuffle") {
@@ -32,7 +34,6 @@ struct EmojiMemorizeGameView: View {
                     viewModel.choose(card)
                 }
         }
-        .foregroundColor(Color.orange)
     }
 }
 
