@@ -15,6 +15,7 @@
 		BC68D6842BB4F6DC0041832B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC68D6832BB4F6DC0041832B /* Assets.xcassets */; };
 		BC68D6872BB4F6DC0041832B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC68D6862BB4F6DC0041832B /* Preview Assets.xcassets */; };
 		BC9771272C38B563009B1C83 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9771262C38B563009B1C83 /* CardView.swift */; };
+		BC9771612C3CC2EB009B1C83 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9771602C3CC2EB009B1C83 /* Pie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BC68D6832BB4F6DC0041832B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC68D6862BB4F6DC0041832B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC9771262C38B563009B1C83 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BC9771602C3CC2EB009B1C83 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				BC68D67F2BB4F6DB0041832B /* MemorizeApp.swift */,
 				BC68D6812BB4F6DB0041832B /* EmojiMemorizeGameView.swift */,
 				BC9771262C38B563009B1C83 /* CardView.swift */,
+				BC9771602C3CC2EB009B1C83 /* Pie.swift */,
 				BC3675372C31C8D60070F3D7 /* AspectVGrid.swift */,
 				BC54C5932BF59EA000A88A48 /* MemorizeGame.swift */,
 				BC54C5952BF5A1CB00A88A48 /* EmojiMemorizeGame.swift */,
@@ -153,6 +156,7 @@
 				BC68D6822BB4F6DB0041832B /* EmojiMemorizeGameView.swift in Sources */,
 				BC3675382C31C8D60070F3D7 /* AspectVGrid.swift in Sources */,
 				BC68D6802BB4F6DB0041832B /* MemorizeApp.swift in Sources */,
+				BC9771612C3CC2EB009B1C83 /* Pie.swift in Sources */,
 				BC9771272C38B563009B1C83 /* CardView.swift in Sources */,
 				BC54C5942BF59EA000A88A48 /* MemorizeGame.swift in Sources */,
 			);
