@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Cardify: ViewModifier, Animatable {
-    init(isFaceUp:Bool) {
+    init(isFaceUp: Bool) {
         rotation = isFaceUp ? 0 : 180
     }
     

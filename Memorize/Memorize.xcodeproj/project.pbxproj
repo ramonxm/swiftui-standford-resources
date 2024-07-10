@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC09507D2C3E11BB00ADF49A /* FlyingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09507C2C3E11BB00ADF49A /* FlyingNumber.swift */; };
 		BC3675382C31C8D60070F3D7 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3675372C31C8D60070F3D7 /* AspectVGrid.swift */; };
 		BC54C5942BF59EA000A88A48 /* MemorizeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54C5932BF59EA000A88A48 /* MemorizeGame.swift */; };
 		BC54C5962BF5A1CB00A88A48 /* EmojiMemorizeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54C5952BF5A1CB00A88A48 /* EmojiMemorizeGame.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC09507C2C3E11BB00ADF49A /* FlyingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingNumber.swift; sourceTree = "<group>"; };
 		BC3675372C31C8D60070F3D7 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		BC54C5932BF59EA000A88A48 /* MemorizeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGame.swift; sourceTree = "<group>"; };
 		BC54C5952BF5A1CB00A88A48 /* EmojiMemorizeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemorizeGame.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				BC68D67F2BB4F6DB0041832B /* MemorizeApp.swift */,
 				BC68D6812BB4F6DB0041832B /* EmojiMemorizeGameView.swift */,
+				BC09507C2C3E11BB00ADF49A /* FlyingNumber.swift */,
 				BC9771262C38B563009B1C83 /* CardView.swift */,
 				BC9771622C3CCA64009B1C83 /* Cardify.swift */,
 				BC9771602C3CC2EB009B1C83 /* Pie.swift */,
@@ -157,6 +160,7 @@
 			files = (
 				BC54C5962BF5A1CB00A88A48 /* EmojiMemorizeGame.swift in Sources */,
 				BC68D6822BB4F6DB0041832B /* EmojiMemorizeGameView.swift in Sources */,
+				BC09507D2C3E11BB00ADF49A /* FlyingNumber.swift in Sources */,
 				BC9771632C3CCA64009B1C83 /* Cardify.swift in Sources */,
 				BC3675382C31C8D60070F3D7 /* AspectVGrid.swift in Sources */,
 				BC68D6802BB4F6DB0041832B /* MemorizeApp.swift in Sources */,
