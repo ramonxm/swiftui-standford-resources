@@ -14,7 +14,6 @@ struct EmojiArt {
     
     private var uniqueEmojiId = 0
     
-    
     mutating func addEmoji(_ emoji: String, at position: Emoji.Position, size: Int) {
         uniqueEmojiId += 1
         
